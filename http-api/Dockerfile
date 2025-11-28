@@ -4,6 +4,9 @@ FROM python:3.9-slim-buster
 COPY ./app /app
 COPY requirements.txt /app/requirements.txt
 
+# Copy the Application Configuration File
+COPY test_conf.yaml /app/conf.yaml
+
 # Set the target container working directory to /app
 WORKDIR /app
 
